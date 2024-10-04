@@ -21,7 +21,7 @@ body {
 
 .image-container {
     width: 100vw;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 90px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,18 +65,31 @@ body {
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .image-container {
+        height: 80vh; /* Default for all browsers, including Chrome */
+    }
+
+    /* Safari-specific styles */
+    @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+            .image-container {
+                height: 70vh; /* Safari-specific height */
+            }
+        }
+    }
+
     .image-container img {
         max-width: 90%;
     }
 
     .save-the-date {
-        flex-direction: column; /* Stack buttons vertically on mobile */
+        flex-direction: row; /* Stack buttons vertically on mobile */
         align-items: center; /* Center buttons */
     }
 
 
     .save-the-date button {
-        font-size: 1rem;
-        padding: 10px 20px;
+        font-size: 0.8rem;
+        padding: 10px 16px;
     }
 }
