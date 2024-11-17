@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoMans - Wedding</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AGaramondPro-Regular';
+            src: url('https://d3jpwrui3eswtl.cloudfront.net/adobegaramondpro/AGaramondPro-Regular-Regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'AGaramondPro-Italic';
+            src: url('https://d3jpwrui3eswtl.cloudfront.net/adobegaramondpro/AGaramondPro-Italic-Italic.ttf') format('truetype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'AGaramondPro-Regular', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            letter-spacing: 0.1em;
+            font-weight: normal;
+            margin: 10px 0;
+        }
+
+        .header .and {
+            font-family: 'AGaramondPro-Italic', serif;
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #666;
+        }
+
+        .nav {
+            padding: 15px 0;
+            background: white;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .nav.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: #333;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .menu-toggle .bar {
+            display: block;
+            width: 25px;
+            height: 2px;
+            margin: 5px auto;
+            background-color: #333;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .main-image-container {
+            max-width: 800px;
+            margin: 0 auto 60px;
+/*            padding: 20px;*/
+            border: 1px solid #ddd;
+            position: relative;
+            background: white;
+        }
+
+        .main-image-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 1px solid #ddd;
+            z-index: -1;
+            background: white;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .date-section {
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .date-section p {
+            font-family: 'AGaramondPro-Italic', serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .date-section h2 {
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            font-weight: normal;
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            font-size: 8rem;
+            font-weight: 800;
+            margin: 40px 0;
+        }
+
+        .story-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .story-section h2 {
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            font-weight: normal;
+            margin-bottom: 40px;
+        }
+
+        .story-section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            padding: 20px 0;
+            margin-top: 80px;
+            text-align: center;
+            border-top: 4px solid black;
+            position: relative;
+        }
+
+        .footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .mobile-menu-title{
+            display: none;
+        }
+
+                .events-title {
+            text-align: center;
+            margin: 60px 0;
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .event-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .event-title {
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .event-date {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .event-time {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .event-location {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .events-divider {
+            width: 50px;
+            height: 1px;
+            background-color: #666;
+            margin: 60px auto;
+        }
+
+
+            .nav {
+                padding: 30px 0;
+            }
+
+        @media (max-width: 768px) {
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .event-section {
+                padding: 0 15px;
+            }
+
+            .mobile-menu-title{
+                display: block;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                gap: 20px;
+                border-bottom: 1px solid #eee;
+                z-index: 9999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active .bar:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            .menu-toggle.active .bar:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>ROHAN</h1>
+        <div class="and">and</div>
+        <h1>MANSI</h1>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <button class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="mobile-menu-title">MENU</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#rsvp">RSVP</a>
+                <a href="#events">Events</a>
+                <a href="#wedding-party">Wedding Party</a>
+                <a href="#travel">Travel</a>
+                <a href="#registry">Gift Registry</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="events-title">EVENTS</h2>
+        
+        <section class="event-section">
+            <h3 class="event-title">WEDDING CEREMONY</h3>
+            <p class="event-date">Wednesday, July 31, 2024</p>
+            <p class="event-time">5:00 PM - 6:00 PM</p>
+            <p class="event-location">Golden Gate Park Rose Garden</p>
+        </section>
+
+        <div class="events-divider"></div>
+
+        <section class="event-section">
+            <h3 class="event-title">RECEPTION</h3>
+            <p class="event-date">Wednesday, July 31, 2024</p>
+            <p class="event-time">7:00 PM - 11:00 PM</p>
+            <p class="event-location">Terra Gallery</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Make it Legendary</p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.querySelector('.nav');
+        const navTop = nav.offsetTop;
+
+        function stickyNavigation() {
+            if (window.scrollY >= navTop) {
+                nav.classList.add('sticky');
+                document.body.style.paddingTop = nav.offsetHeight + 'px';
+            } else {
+                nav.classList.remove('sticky');
+                document.body.style.paddingTop = 0;
+            }
+        }
+
+        window.addEventListener('scroll', stickyNavigation);
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
