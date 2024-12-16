@@ -201,17 +201,102 @@
         }
 
         .mobile-menu-title{
-        	display: none;
+            display: none;
         }
 
-        @media (max-width: 768px) {
-        	.nav {
-            	padding: 30px 0;
-        	}
+                .events-title {
+            text-align: center;
+            margin: 60px 0;
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            font-weight: normal;
+            color: #333;
+        }
 
-        	.mobile-menu-title{
-        		display: block;
-        	}
+        .event-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .event-title {
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .event-date {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .event-time {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .event-location {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .events-divider {
+            width: 50px;
+            height: 1px;
+            background-color: #666;
+            margin: 60px auto;
+        }
+
+
+            .nav {
+                padding: 30px 0;
+            }
+
+            .add-to-calendar {
+    display: inline-block;
+    margin-top: 15px;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    border: 1px solid;
+    padding: 6px 16px;
+    border-radius: 8px;
+}
+
+.add-to-calendar:hover {
+    background-color: #333;
+    color:white;
+    
+}
+
+.add-to-calendar i {
+    margin-right: 5px;
+}
+
+        @media (max-width: 768px) {
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .event-section {
+                padding: 0 15px;
+            }
+
+            .mobile-menu-title{
+                display: block;
+            }
 
             .menu-toggle {
                 display: block;
@@ -279,28 +364,58 @@
     </nav>
 
     <div class="container">
-        <div class="main-image-container">
-            <img class="main-image" alt="Rohan and Mansi">
-        </div>
+        <!-- <h2 class="events-title">EVENTS</h2> -->
+        
+        <section class="event-section">
+            <h3 class="event-title"><span style="color:#233752">RING CEREMONY</span></h3>
 
-        <section class="date-section">
-            <p>Please join us for our wedding celebration on</p>
-            <h2>JANUARY 23, 2025</h2>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rohan+and+Mansi+-+Ring+Ceremony&dates=20250123T190000/20250123T200000&details=Ring+Ceremony+at+Small+Swimming+Pool+Area%2C+Ambika+Farms+Nagpur.+Followed+by+dinner.&location=Small+Swimming+Pool+Area%2C+Ambika+Farms+Nagpur" target="_blank" class="add-to-calendar">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+            </a>
+        
+            <p class="event-date">Thursday, Jan 23 2025</p>
+            <p class="event-time">7 PM - 8 PM</p>
+            <p class="event-location">Small swimming pool area, Ambika Farms Nagpur<br><br>
+                Followed by dinner</p>
         </section>
 
-        <div class="divider">+</div>
+        <div class="events-divider"></div>
 
-        <section class="story-section">
-            <h2>OUR STORY</h2>
-            <p>
-                Rohan and Mansi's paths crossed in the most unexpected way. Their story began with a chance encounter 
-                that blossomed into a beautiful journey of love and companionship. Through shared laughter, dreams, 
-                and adventures, they found in each other a perfect match, writing their own unique love story with 
-                each passing day.
+        <section class="event-section">
+            <h3 class="event-title"><span style="color:#FFA500">HALDI</span> - <span style="color:#ED145D">CARNIVAL</span></h3>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rohan+and+Mansi+-+Haldi+-+Carnival&dates=20250124T110000/20250124T140000&details=Haldi+-+Carnival+at+Courtyard+Lawns%2C+Ambika+Farms+Nagpur.+Followed+by+lunch.+Get+ready+to+put+your+dance+shoes+on%2C+play+some+exciting+games+and+XXX.&location=Courtyard+Lawns%2C+Ambika+Farms+Nagpur" target="_blank" class="add-to-calendar">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+            </a>            <p class="event-date">Friday, Jan 24 2025</p>
+            <p class="event-time">11 AM - 2PM</p>
+            <p class="event-location">Courtyard Lawns, Ambika Farms Nagpur</p><br>
+                Followed by lunch<br><br>
+                <p class="event-location" style="color:#4287f5">
+                If (like the groom) you are also unaware of Carnival, get ready to put your dance shoes on, play some exciting games and XXX
             </p>
-            <p>
-                They're so excited to start the next phase of their love together and can't wait to celebrate with you in August!
-            </p>
+        </section>
+
+        <div class="events-divider"></div>
+
+        <section class="event-section">
+            <h3 class="event-title"><span style="color:#931F0E">WEDDING RECEPTION</span></h3>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rohan+and+Mansi+-+Wedding+Reception&dates=20250124T180000/20250125T003000&details=Wedding+Reception+at+Ambika+Farms+Nagpur.+Baraat+at+6+PM%2C+Reception+at+8+PM+(Valentina+lawns)%2C+Phere+at+11.30+PM+(Courtyard+lawns).&location=Ambika+Farms+Nagpur" target="_blank" class="add-to-calendar">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+            </a>
+                            <p class="event-date">Friday Jan 24 2025</p>
+            <p class="event-time"><b>Baraat:</b> 6 PM</p>
+            <p class="event-time"><b>Reception:</b> 8 PM (Valentina lawns)</p>
+            <p class="event-time"><b>Phere:</b> 11.30 PM (Courtyard lawns)</p>
+            <p class="event-location">Ambika Farms, Nagpur</p>
+        </section>
+
+        <div class="events-divider"></div>
+
+        <section class="event-section">
+            <h3 class="event-title"><span style="color:black">CHECKOUT</span></h3>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Rohan+and+Mansi+-+Checkout&dates=20250125T070000/20250125T070000&details=Checkout+from+Ambika+Farms+Nagpur.&location=Ambika+Farms+Nagpur" target="_blank" class="add-to-calendar">
+                <i class="fas fa-calendar-plus"></i> Add to Calendar
+            </a>        
+            <p class="event-date">Saturday, Jan 25 2025, 7 AM</p>
         </section>
     </div>
 
@@ -340,12 +455,6 @@
                 navLinks.classList.remove('active');
             }
         });
-
-        const mainImage = document.querySelector('.main-image');
-    const images = ['media/1.webp', 'media/2.jpeg', 'media/3.jpeg', 'media/4.jpeg', 'media/5.jpeg'];
-    const randomIndex = Math.floor(Math.random() * images.length);
-    mainImage.src = images[randomIndex];
-
     </script>
 </body>
 </html>

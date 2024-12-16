@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoMans - Wedding</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.png">
+    <meta property="og:image" content="media/share.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @font-face {
@@ -227,6 +229,14 @@
             text-transform: uppercase;
         }
 
+        .event-quote {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
         .event-date {
             font-family: 'AGaramondPro-Regular', serif;
             font-size: 1rem;
@@ -259,6 +269,25 @@
                 padding: 30px 0;
             }
 
+            .from-city{
+                margin-top: 40px;
+            }
+
+            .mode{
+                margin-top: 10px;
+                color:black;
+                /* font-weight: bold; */
+            }
+
+            .city-connector{
+                color:black;
+                font-weight: bold;
+            } 
+
+            .footnote{
+                font-style: italic;
+                font-size: 0.8rem;
+            } 
         @media (max-width: 768px) {
 
             .header h1 {
@@ -329,35 +358,55 @@
             </button>
             <div class="mobile-menu-title">MENU</div>
             <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#rsvp">RSVP</a>
-                <a href="#events">Events</a>
-                <a href="#wedding-party">Wedding Party</a>
-                <a href="#travel">Travel</a>
-                <a href="#registry">Gift Registry</a>
+                <a href="/home">Home</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/itinerary">Itinerary</a>
+                <a href="/travel">Travel</a>
+                <a href="/things-to-do">Things to do</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <h2 class="events-title">EVENTS</h2>
+        <!-- <h2 class="events-title">EVENTS</h2> -->
         
         <section class="event-section">
-            <h3 class="event-title">WEDDING CEREMONY</h3>
-            <p class="event-date">Wednesday, July 31, 2024</p>
-            <p class="event-time">5:00 PM - 6:00 PM</p>
-            <p class="event-location">Golden Gate Park Rose Garden</p>
+            <h3 class="event-title"><span>Getting to Nagpur</span></h3>
+            <p class="event-quote">Sharing our recommendations on most popular routes to ensure you have the best experience at the weeding</p>
+
+            <div class="from-city">
+                <div class="city-connector">Mumbai-Nagpur</div>
+                <div class="mode">Flight</div>6E 5124 (06:25-07:55 AM) - Yeah we know it's early but we will make sure to make your stay comfortable. And of course, it will be so worth it.
+                <div class="mode">Train</div>12289 (NGP Duronto express, One day prior 7:55 PM - Next day Jan 7.20 AM)
+            </div>
+
+            <div class="from-city">
+                <div class="city-connector">Bengaluru-Nagpur</div>
+                <div class="mode">Flight</div> S5 245 (07:45-09:35 AM)
+                <div class="mode">Train</div> 22691(Rajdhani express, One day prior  8:00 PM - Next day 23 Jan 2.55 PM)
+            </div>
+
+            <div class="from-city">
+            <div class="city-connector">New Delhi-Nagpur</div>
+            <div class="mode">Flight</div>6E 2098 (07:20-09:05 AM)
+            <div class="mode">Train</div> 22692 (Sbc Rajdhani express, One day prior 7:50 PM - Next day 23 Jan 9.25 AM)
+            </div>
         </section>
 
         <div class="events-divider"></div>
 
+
+        
         <section class="event-section">
-            <h3 class="event-title">RECEPTION</h3>
-            <p class="event-date">Wednesday, July 31, 2024</p>
-            <p class="event-time">7:00 PM - 11:00 PM</p>
-            <p class="event-location">Terra Gallery</p>
-        </section>
+            <h3 class="event-title"><span>Getting to the venue</span></h3>
+
+            <div class="from-city">
+                <div class="city-connector">Ambika Farms, Katol Road, Nagpur</div>
+                <div class="mode"><a href="https://maps.app.goo.gl/H9q74US4w3gmo6X78" target="_blank">Find on Google maps</a></div><br>
+                <div class="footnote">Please note that the venue is ~ 1 hour away from main city. Based on your itinerary we will arrange transport from airport/ station to the venue and back. In case of any emergencies/ change in plans, there are multiple local cabs as well as Uber Intercity which can be booked from where you are in the city.</div>
+            </section>
     </div>
+
 
     <footer class="footer">
         <div class="container">

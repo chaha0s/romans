@@ -201,17 +201,81 @@
         }
 
         .mobile-menu-title{
-        	display: none;
+            display: none;
         }
 
-        @media (max-width: 768px) {
-        	.nav {
-            	padding: 30px 0;
-        	}
+                .events-title {
+            text-align: center;
+            margin: 60px 0;
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            font-weight: normal;
+            color: #333;
+        }
 
-        	.mobile-menu-title{
-        		display: block;
-        	}
+        .event-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .event-title {
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .event-date {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .event-time {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .event-location {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .events-divider {
+            width: 50px;
+            height: 1px;
+            background-color: #666;
+            margin: 60px auto;
+        }
+
+
+            .nav {
+                padding: 30px 0;
+            }
+
+
+        @media (max-width: 768px) {
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .event-section {
+                padding: 0 15px;
+            }
+
+            .mobile-menu-title{
+                display: block;
+            }
 
             .menu-toggle {
                 display: block;
@@ -251,6 +315,65 @@
                 font-size: 2.5rem;
             }
         }
+        .gallery-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            height: 600px;
+            grid-gap: 10px;
+            overflow: hidden;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -279,29 +402,8 @@
     </nav>
 
     <div class="container">
-        <div class="main-image-container">
-            <img class="main-image" alt="Rohan and Mansi">
+        <div class="gallery" id="gallery">
         </div>
-
-        <section class="date-section">
-            <p>Please join us for our wedding celebration on</p>
-            <h2>JANUARY 23, 2025</h2>
-        </section>
-
-        <div class="divider">+</div>
-
-        <section class="story-section">
-            <h2>OUR STORY</h2>
-            <p>
-                Rohan and Mansi's paths crossed in the most unexpected way. Their story began with a chance encounter 
-                that blossomed into a beautiful journey of love and companionship. Through shared laughter, dreams, 
-                and adventures, they found in each other a perfect match, writing their own unique love story with 
-                each passing day.
-            </p>
-            <p>
-                They're so excited to start the next phase of their love together and can't wait to celebrate with you in August!
-            </p>
-        </section>
     </div>
 
     <footer class="footer">
@@ -341,11 +443,48 @@
             }
         });
 
-        const mainImage = document.querySelector('.main-image');
-    const images = ['media/1.webp', 'media/2.jpeg', 'media/3.jpeg', 'media/4.jpeg', 'media/5.jpeg'];
-    const randomIndex = Math.floor(Math.random() * images.length);
-    mainImage.src = images[randomIndex];
+        const gallery = document.getElementById('gallery');
+        const totalImages = 5;
+        const sizes = ['', 'wide', 'tall', 'large'];
 
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Create an array of image classes to distribute
+        const imageSizeClasses = [];
+        for (let i = 0; i < totalImages; i++) {
+            // Randomly assign sizes, with more standard-sized images
+            const randomSizeIndex = Math.random() < 0.7 ? 0 : 
+                Math.random() < 0.5 ? 1 : 
+                Math.random() < 0.5 ? 2 : 3;
+            imageSizeClasses.push(sizes[randomSizeIndex]);
+        }
+
+        // Shuffle the size classes
+        const shuffledSizes = shuffleArray(imageSizeClasses);
+
+        for (let i = 1; i <= totalImages; i++) {
+            const galleryItem = document.createElement('div');
+            galleryItem.classList.add('gallery-item');
+            
+            // Add random size class
+            if (shuffledSizes[i-1]) {
+                galleryItem.classList.add(shuffledSizes[i-1]);
+            }
+            
+            const img = document.createElement('img');
+            img.src = `media/${i}.jpeg`; // Assumes images are in a media folder
+            img.alt = `Wedding Photo ${i}`;
+            img.loading = 'lazy'; // Improve performance with lazy loading
+            
+            galleryItem.appendChild(img);
+            gallery.appendChild(galleryItem);
+        } 
     </script>
 </body>
 </html>
