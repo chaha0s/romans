@@ -201,17 +201,107 @@
         }
 
         .mobile-menu-title{
-        	display: none;
+            display: none;
         }
 
-        @media (max-width: 768px) {
-        	.nav {
-            	padding: 30px 0;
-        	}
+                .events-title {
+            text-align: center;
+            margin: 60px 0;
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            font-weight: normal;
+            color: #333;
+        }
 
-        	.mobile-menu-title{
-        		display: block;
-        	}
+        .event-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .event-title {
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .event-quote {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .event-date {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .event-time {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .event-location {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .events-divider {
+            width: 50px;
+            height: 1px;
+            background-color: #666;
+            margin: 60px auto;
+        }
+
+
+            .nav {
+                padding: 30px 0;
+            }
+
+            .from-city{
+                margin-top: 40px;
+            }
+
+            .mode{
+                margin-top: 10px;
+                color:black;
+                /* font-weight: bold; */
+            }
+
+            .city-connector{
+                color:black;
+                font-weight: bold;
+            } 
+
+            .footnote{
+                color:black;
+                /* font-style: italic;
+                font-size: 0.8rem; */
+            } 
+        @media (max-width: 768px) {
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .event-section {
+                padding: 0 15px;
+            }
+
+            .mobile-menu-title{
+                display: block;
+            }
 
             .menu-toggle {
                 display: block;
@@ -279,30 +369,45 @@
     </nav>
 
     <div class="container">
-        <div class="main-image-container">
-            <img class="main-image" alt="Rohan and Mansi">
-        </div>
+        <!-- <h2 class="events-title">EVENTS</h2> -->
+        
+        <section class="event-section">
+            <h3 class="event-title"><span>Getting to Nagpur</span></h3>
+            <p class="event-quote">Sharing our recommendations on most popular routes to ensure you have the best experience at the weeding</p>
 
-        <section class="date-section">
-            <p>Please join us for our wedding celebration on</p>
-            <h2>JANUARY 23-24, 2025</h2>
+            <div class="from-city">
+                <div class="city-connector">Mumbai-Nagpur</div>
+                <div class="mode">Flight</div>6E 5124 (06:25-07:55 AM) - Yeah we know it's early but we will make sure to make your stay comfortable. And of course, it will be so worth it.
+                <div class="mode">Train</div>12289 (NGP Duronto express, One day prior 7:55 PM - Next day Jan 7.20 AM)
+            </div>
+
+            <div class="from-city">
+                <div class="city-connector">Bengaluru-Nagpur</div>
+                <div class="mode">Flight</div> S5 245 (07:45-09:35 AM)
+                <div class="mode">Train</div> 22691(Rajdhani express, One day prior  8:00 PM - Next day 2.55 PM)
+            </div>
+
+            <div class="from-city">
+            <div class="city-connector">New Delhi-Nagpur</div>
+            <div class="mode">Flight</div>6E 2098 (07:20-09:05 AM)
+            <div class="mode">Train</div> 22692 (Sbc Rajdhani express, One day prior 7:50 PM - Next day 9.25 AM)
+            </div>
         </section>
 
-        <!-- <div class="divider">+</div> -->
+        <div class="events-divider"></div>
 
-        <section class="story-section">
-            <h2>OUR STORY</h2>
-            <p>
-                It’s 2020, and Rohan and Mansi are two MBA students navigating Con Week on Zoom. Mansi claims it was ‘crush at first sight,’. Rohan? He’s not buying it for a second.<br><br>
-                
-                Their banter soon turned into study sessions: he’d decode Decision Sciences, and she’d pretend to teach him Accounts. Rohan nailed both and Mansi happily took the credit as his “brilliant” teacher.<br><br>
-                
-                By March 2021, Mansi (aka <i>the braver one</i>) asked him out. Rohan has a totally fictional memory of it being the other way around, but we all know who the real boss is. <br><br>
-                
-                Fast forward to now: their story has grown from a chance Zoom meeting to a lifelong partnership, and they can’t wait to start this next chapter together!<br><br>
-             </p>
-        </section>
+
+        
+        <section class="event-section">
+            <h3 class="event-title"><span>Getting to the venue</span></h3>
+
+            <div class="from-city">
+                <div class="city-connector">Ambika Farms, Katol Road, Nagpur</div>
+                <div class="mode"><a href="https://maps.app.goo.gl/H9q74US4w3gmo6X78" target="_blank">Find on Google maps</a></div><br>
+                <div class="footnote">Please note that the venue is ~ 1 hour away from main city. Based on your itinerary we will arrange transport from airport/ station to the venue and back. In case of any emergencies/ change in plans, there are multiple local cabs as well as Uber Intercity which can be booked from where you are in the city.</div>
+            </section>
     </div>
+
 
     <!-- <footer class="footer">
         <div class="container">
@@ -340,12 +445,6 @@
                 navLinks.classList.remove('active');
             }
         });
-
-        const mainImage = document.querySelector('.main-image');
-    const images = ['media/1.jpeg', 'media/2.jpeg', 'media/3.jpeg'];
-    const randomIndex = Math.floor(Math.random() * images.length);
-    mainImage.src = images[randomIndex];
-
     </script>
 </body>
 </html>

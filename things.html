@@ -201,17 +201,106 @@
         }
 
         .mobile-menu-title{
-        	display: none;
+            display: none;
         }
 
-        @media (max-width: 768px) {
-        	.nav {
-            	padding: 30px 0;
-        	}
+                .events-title {
+            text-align: center;
+            margin: 60px 0;
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            font-weight: normal;
+            color: #333;
+        }
 
-        	.mobile-menu-title{
-        		display: block;
-        	}
+        .event-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .event-title {
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .place-quote {
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .event-date {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .event-time {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .event-location {
+            font-family: 'AGaramondPro-Regular', serif;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .events-divider {
+            width: 50px;
+            height: 1px;
+            background-color: #666;
+            margin: 60px auto;
+        }
+
+
+            .nav {
+                padding: 30px 0;
+            }
+
+            .place-to-visit{
+                margin-top: 20px;
+            }
+
+            .mode{
+                margin-top: 10px;
+                color:black;
+                /* font-weight: bold; */
+            }
+
+            .city-connector{
+                color:black;
+                font-weight: bold;
+            } 
+
+            .footnote{
+                font-style: italic;
+                font-size: 0.8rem;
+            } 
+        @media (max-width: 768px) {
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .event-section {
+                padding: 0 15px;
+            }
+
+            .mobile-menu-title{
+                display: block;
+            }
 
             .menu-toggle {
                 display: block;
@@ -270,37 +359,84 @@
             </button>
             <div class="mobile-menu-title">MENU</div>
             <div class="nav-links">
-                <a href="/home">Home</a>
-                <a href="/itinerary">Itinerary</a>
-                <a href="/travelling">Travel</a>
-                <a href="/things-to-do">Things to do</a>
+                <a href="/main">Home</a>
+                <a href="/iti">Itinerary</a>
+                <a href="/travel">Travel</a>
+                <a href="/things">Things to do</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="main-image-container">
-            <img class="main-image" alt="Rohan and Mansi">
-        </div>
+        
+        <!-- <section class="event-section">
+            <h3 class="event-title"><span>Places to visit</span></h3>
+            <p class="place-quote">(In no particular order, except for the order in which ChatGPT popped these up when the couple prompted at 2 AM)</p>
 
-        <section class="date-section">
-            <p>Please join us for our wedding celebration on</p>
-            <h2>JANUARY 23-24, 2025</h2>
+            <div class="place-to-visit">
+                Deeksha Bhoomi
+            </div>
+
+
+            <div class="place-to-visit">
+                Ambazari Lake and Garden
+            </div>
+
+
+
+            <div class="place-to-visit">
+                Futala Lake
+            </div>
+
+            <div class="place-to-visit">
+                Maharaj Bagh Zoo
+            </div>
+        </section> -->
+
+        <!-- <div class="events-divider"></div> -->
+
+        <section class="event-section">
+            <h3 class="event-title"><span>Food not to be missed</span></h3>
+
+            <div class="place-to-visit">
+                Tarri Poha
+            </div>
+
+            <div class="place-to-visit">
+                Barbecue
+            </div>
+
+            <div class="place-to-visit">
+                Tekdi Samosa
+            </div>
+
+            <div class="place-to-visit">
+                Kathi Crossing
+            </div>
+
+            <div class="place-to-visit">
+                Saoji 🌶️ (If you can)
+            </div>
+
         </section>
 
-        <!-- <div class="divider">+</div> -->
+        <div class="events-divider"></div>
 
-        <section class="story-section">
-            <h2>OUR STORY</h2>
-            <p>
-                It’s 2020, and Rohan and Mansi are two MBA students navigating Con Week on Zoom. Mansi claims it was ‘crush at first sight,’. Rohan? He’s not buying it for a second.<br><br>
-                
-                Their banter soon turned into study sessions: he’d decode Decision Sciences, and she’d pretend to teach him Accounts. Rohan nailed both and Mansi happily took the credit as his “brilliant” teacher.<br><br>
-                
-                By March 2021, Mansi (aka <i>the braver one</i>) asked him out. Rohan has a totally fictional memory of it being the other way around, but we all know who the real boss is. <br><br>
-                
-                Fast forward to now: their story has grown from a chance Zoom meeting to a lifelong partnership, and they can’t wait to start this next chapter together!<br><br>
-             </p>
+        <section class="event-section">
+            <h3 class="event-title"><span>Around Nagpur</span></h3>
+
+            <div class="place-to-visit">
+                Pench National Park
+            </div>
+
+            <div class="place-to-visit">
+                Ramtek Temple and Fort
+            </div>
+
+            <div class="place-to-visit">
+                Chikhaldara Hill Station
+            </div>
+
         </section>
     </div>
 
@@ -340,12 +476,6 @@
                 navLinks.classList.remove('active');
             }
         });
-
-        const mainImage = document.querySelector('.main-image');
-    const images = ['media/1.jpeg', 'media/2.jpeg', 'media/3.jpeg'];
-    const randomIndex = Math.floor(Math.random() * images.length);
-    mainImage.src = images[randomIndex];
-
     </script>
 </body>
 </html>
