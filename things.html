@@ -340,13 +340,54 @@
                 font-size: 2.5rem;
             }
         }
+
+        .header h1 {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    margin: 10px;
+}
+
+.header .and {
+    font-family: 'AGaramondPro-Italic', serif;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .name-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .header h1 {
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+
+    .header .and {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+}
     </style>
 </head>
 <body>
     <header class="header">
-        <h1>ROHAN</h1>
-        <div class="and">and</div>
-        <h1>MANSI</h1>
+        <div class="name-container">
+            <h1>ROHAN</h1>
+            <div class="and">and</div>
+            <h1>MANSI</h1>
+        </div>
         <h4>#RoMans</h4>
     </header>
 
@@ -368,32 +409,6 @@
     </nav>
 
     <div class="container">
-        
-        <!-- <section class="event-section">
-            <h3 class="event-title"><span>Places to visit</span></h3>
-            <p class="place-quote">(In no particular order, except for the order in which ChatGPT popped these up when the couple prompted at 2 AM)</p>
-
-            <div class="place-to-visit">
-                Deeksha Bhoomi
-            </div>
-
-
-            <div class="place-to-visit">
-                Ambazari Lake and Garden
-            </div>
-
-
-
-            <div class="place-to-visit">
-                Futala Lake
-            </div>
-
-            <div class="place-to-visit">
-                Maharaj Bagh Zoo
-            </div>
-        </section> -->
-
-        <!-- <div class="events-divider"></div> -->
 
         <section class="event-section">
             <h3 class="event-title"><span>Food not to be missed</span></h3>
