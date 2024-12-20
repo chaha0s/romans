@@ -62,7 +62,7 @@
             background: white;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
-            margin-bottom: 40px;
+            /* margin-bottom: 40px; */
             position: relative;
         }
 
@@ -268,7 +268,7 @@
             .header h1 {
                 font-size: 2.5rem;
             }
-            
+
             .event-section {
                 padding: 0 15px;
             }
@@ -403,7 +403,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container"  style="margin-top: 40px;">
         <div class="gallery" id="gallery">
         </div>
     </div>
@@ -461,8 +461,8 @@
         const imageSizeClasses = [];
         for (let i = 0; i < totalImages; i++) {
             // Randomly assign sizes, with more standard-sized images
-            const randomSizeIndex = Math.random() < 0.7 ? 0 : 
-                Math.random() < 0.5 ? 1 : 
+            const randomSizeIndex = Math.random() < 0.7 ? 0 :
+                Math.random() < 0.5 ? 1 :
                 Math.random() < 0.5 ? 2 : 3;
             imageSizeClasses.push(sizes[randomSizeIndex]);
         }
@@ -473,20 +473,20 @@
         for (let i = 1; i <= totalImages; i++) {
             const galleryItem = document.createElement('div');
             galleryItem.classList.add('gallery-item');
-            
+
             // Add random size class
             if (shuffledSizes[i-1]) {
                 galleryItem.classList.add(shuffledSizes[i-1]);
             }
-            
+
             const img = document.createElement('img');
             img.src = `media/${i}.jpeg`; // Assumes images are in a media folder
             img.alt = `Wedding Photo ${i}`;
             img.loading = 'lazy'; // Improve performance with lazy loading
-            
+
             galleryItem.appendChild(img);
             gallery.appendChild(galleryItem);
-        } 
+        }
     </script>
 </body>
 </html>
